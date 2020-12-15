@@ -1,7 +1,13 @@
 package main
 
-import "github.com/heheh13/cobra-practise/appscode/cmd"
+import (
+	"fmt"
+
+	"github.com/heheh13/cobra-practise/appscode/cmd"
+)
 
 func main() {
-	cmd.Execute()
+	if err := cmd.Execute(); err != nil {
+		fmt.Println(err)
+	}
 }
